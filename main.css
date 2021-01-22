@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+}
+
+main {
+  margin: 3vh;
+}
+
+header,
+footer {
+  background-color: grey;
+  padding: 3vh;
+  text-align: center;
+}
+
+footer,
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+nav {
+  padding-top: 2vh;
+}
+
+.Information1,
+.Information2,
+.Information3,
+.Information4 {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
