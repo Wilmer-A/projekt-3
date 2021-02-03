@@ -24,10 +24,7 @@ nav {
   padding-top: 2vh;
 }
 
-.Information1,
-.Information2,
-.Information3,
-.Information4 {
+.Information {
   display: flex;
   flex-direction: column;
 }
