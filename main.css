@@ -3,6 +3,16 @@ body {
   padding: 0;
 }
 
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+
 main {
   margin: 3vh;
 }
@@ -27,6 +37,7 @@ li {
 
 header h1 {
   font-size: 2.3vw;
+  user-select: none;
 }
 
 main h1 {
@@ -37,14 +48,27 @@ main h1 {
 form {
   display: flex;
   justify-content: center;
-  min-height: 6vh;
-  padding: 5.5vh;
+  padding: 6vh;
 }
 
 form button {
+  background-image: linear-gradient(45deg, rgb(26, 199, 118), rgb(26, 38, 206));
   color: black;
-  background: white;
   cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+form button:hover {
+  color: white;
+}
+
+form input,
+form button {
+  padding: 1vw;
+  font-size: 1.6vw;
+  border: black;
+  border-style: solid;
+  border-radius: 0.3vw;
 }
 
 #list-container {
@@ -60,7 +84,7 @@ nav {
 }
 
 nav {
-  padding-top: 2.3vh;
+  padding-top: 2vh;
 }
 
 .information {
@@ -72,4 +96,8 @@ a {
   text-decoration: none;
   font-weight: bold;
   color: white;
+}
+
+a:hover {
+  text-decoration: underline;
 }
