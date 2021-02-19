@@ -1,4 +1,4 @@
-let listItems = ["Sak nr 1", "Sak nr 2"]
+let listItems = ["Använd text-rutan och tryck på plusset för att skriva din lista", "(ta-bort-funktion)"]
 
 let listInput = document.querySelector("[list-input]");
 let listForm = document.querySelector("[list-form]");
