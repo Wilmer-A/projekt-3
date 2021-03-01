@@ -24,12 +24,12 @@ function createList(items) {
         list.append(newListItem);
 
         let checkmarkButton = document.createElement("button");
-        checkmarkButton.innerHTML = "✓";
+        checkmarkButton.innerHTML = '<i class="fas fa-check-circle"></i>';
         checkmarkButton.classList.add("complete-button");
         newListItem.append(checkmarkButton);
 
         let xButton = document.createElement("button");
-        xButton.innerHTML = "✗";
+        xButton.innerHTML = '<i class="fas fa-times-circle"></i>';
         xButton.classList.add("remove-button");
         newListItem.append(xButton);
     });
@@ -39,8 +39,9 @@ function createList(items) {
 function removeItem(event) {
     let itemToRemove = event.target;
     if (itemToRemove.classList.contains("remove-button")){
-        let textToRemove = itemToRemove.parentElement;
-        textToRemove.remove();
+        let textToRemove = itemToRemove.parentElement.innerText;
+        listItems = (listItems.filter((string) => string !== textToRemove));
+        updateList();
     }
 }
 

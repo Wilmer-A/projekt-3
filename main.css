@@ -104,11 +104,17 @@ form button {
 }
 
 .complete-button {
-  background-color: rgb(24, 204, 24);
+  background: rgb(24, 204, 24);
 }
 
 .remove-button {
-  background-color: rgb(255, 43, 43);
+  background: rgb(255, 43, 43);
+}
+
+.fa-plus-circle,
+.fa-check-circle,
+.fa-times-circle {
+  pointer-events: none;
 }
 
 footer,
