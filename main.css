@@ -84,7 +84,8 @@ form button {
 }
 
 .complete-button,
-.remove-button {
+.remove-button,
+.important-button {
   border: black;
   border-style: solid;
   border-radius: 0.3rem;
@@ -92,14 +93,15 @@ form button {
   cursor: pointer;
   transition: all 0.4s ease;
   padding: 0.4rem;
-  margin-top: 0.3rem;
-  margin-bottom: 1.2rem;
-  margin-right: 0.7rem;
-  margin-left: 1.5rem;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  margin-right: 0rem;
+  margin-left: 2rem;
 }
 
 .complete-button:hover,
-.remove-button:hover {
+.remove-button:hover,
+.important-button:hover {
   color: white;
 }
 
@@ -111,9 +113,14 @@ form button {
   background: rgb(255, 43, 43);
 }
 
+.important-button {
+  background: rgb(206, 209, 0);
+}
+
 .fa-plus-circle,
 .fa-check-circle,
-.fa-times-circle {
+.fa-times-circle,
+.fa-exclamation-circle {
   pointer-events: none;
 }
 
@@ -125,7 +132,7 @@ nav {
 }
 
 nav {
-  padding-top: 2vh;
+  padding-top: 1.1rem;
 }
 
 .information {
@@ -146,5 +153,27 @@ a:hover {
 .completed-item {
   text-decoration: line-through;
   text-decoration-color: rgb(24, 204, 24);
-  opacity: 0.6;
+  opacity: 0.7;
+}
+
+.important-item {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#kontakta-oss-1 {
+  width: 15rem;
+}
+
+#om-oss-1 {
+  width: 15rem;
+}
+
+#om-oss-2 {
+  width: 15rem;
+}
+
+#logo-image {
+  width: 7rem;
+  user-select: none;
 }

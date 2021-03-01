@@ -20,18 +20,24 @@ function createList(items) {
         newListItem.innerText = item;
         newListItem.classList.add("todo-text");
         newListItem.addEventListener("click", removeItem);
-        newListItem.addEventListener("click", checkItem);
+        newListItem.addEventListener("click", checkItemAsComplete);
+        newListItem.addEventListener("click", markItemAsImportant);
         list.append(newListItem);
-
-        let checkmarkButton = document.createElement("button");
-        checkmarkButton.innerHTML = '<i class="fas fa-check-circle"></i>';
-        checkmarkButton.classList.add("complete-button");
-        newListItem.append(checkmarkButton);
 
         let xButton = document.createElement("button");
         xButton.innerHTML = '<i class="fas fa-times-circle"></i>';
         xButton.classList.add("remove-button");
         newListItem.append(xButton);
+
+        let importantButton = document.createElement("button");
+        importantButton.innerHTML = '<i class="fas fa-exclamation-circle"></i>';
+        importantButton.classList.add("important-button");
+        newListItem.append(importantButton);
+
+        let checkmarkButton = document.createElement("button");
+        checkmarkButton.innerHTML = '<i class="fas fa-check-circle"></i>';
+        checkmarkButton.classList.add("complete-button");
+        newListItem.append(checkmarkButton);
     });
     return list;
 }
@@ -45,7 +51,7 @@ function removeItem(event) {
     }
 }
 
-function checkItem(event) {
+function checkItemAsComplete(event) {
     let itemToCheck = event.target;
     if (itemToCheck.classList.contains("complete-button")){
         let textToCheck = itemToCheck.parentElement;
@@ -53,9 +59,12 @@ function checkItem(event) {
     }
 }
 
-function markItem(event) {
+function markItemAsImportant(event) {
     let itemToMark = event.target;
-    
+    if (itemToMark.classList.contains("important-button")){
+        let textToMark = itemToMark.parentElement;
+        textToMark.classList.toggle("important-item"); 
+    }
 }
 
 function updateList() {
