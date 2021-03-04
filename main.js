@@ -79,7 +79,6 @@ function markItemAsImportant(event) {
 
 function filterItems(event) {
     let todos = document.getElementsByClassName('todo-text');
-    console.log(todos);
     Array.from(todos).forEach((todo) => {
         switch (event.target.value) {
             case "all":

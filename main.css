@@ -14,12 +14,12 @@ body {
 }
 
 main {
-  margin: 3vh;
+  margin: 0.8rem;
 }
 
 header,
 footer {
-  padding: 3vh;
+  padding: 1rem;
   text-align: center;
   background-image: linear-gradient(90deg, rgb(36, 197, 197), rgb(55, 41, 179));
 }
@@ -42,19 +42,19 @@ input[type="text"] {
 }
 
 header h1 {
-  font-size: 2.3vw;
+  font-size: 1.7rem;
   user-select: none;
 }
 
 main h1 {
-  font-size: 1.7vw;
+  font-size: 1.2rem;
   text-decoration: underline;
 }
 
 form {
   display: flex;
   justify-content: center;
-  padding: 6vh;
+  padding: 2rem;
 }
 
 form button {
@@ -72,11 +72,17 @@ form button:hover {
 
 form input,
 form button {
-  padding: 0.9rem;
+  padding: 0.8rem;
   font-size: 1.1rem;
   border: black;
   border-style: solid;
   border-width: 0.15rem;
+}
+
+.input-and-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 form input {
@@ -195,4 +201,27 @@ select {
   font-family: "Noto Serif", serif;
   border-color: black;
   border-width: 0.1rem;
+}
+
+@media (max-width: 1000px) {
+  header h1 {
+    font-size: 1.5rem;
+    user-select: none;
+  }
+
+  .select {
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+  }
+
+  [list-form] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form input,
+  form button {
+    padding: 0.5rem;
+  }
 }
